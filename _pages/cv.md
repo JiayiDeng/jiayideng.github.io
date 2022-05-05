@@ -8,7 +8,11 @@ redirect_from:
 ---
 
 {% include base_path %}
-[Download full CV here](http://academicpages.github.io/files/JiayiDengCV2022_04.pdf)
+
+Download full CV here
+======
+* [Download full CV here](http://academicpages.github.io/files/JiayiDengCV2022_04.pdf)
+
 Education
 ======
 * B.S. (Honors) in Applied Psychology, Hong Kong Baptist University United International College, 2018
