@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jiayi Deng's research website"
+title                    : "Jiayi Deng's Research Website"
 title_separator          : "-"
 name                     : &name "Jiayi Deng"
 description              : &description "personal description"
