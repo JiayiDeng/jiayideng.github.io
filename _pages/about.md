@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Jiayi Deng's Academic Personal Websites"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -10,9 +10,9 @@ redirect_from:
 
 Jiayi's website
 
-A data-driven personal website
+Jiayi Deng's Academic Personal Websites
 ======
-Under construction
+Jiayi Deng is a Ph.D. student in quantitative methodology at the University of Minnesota. She specializes in educational measurement. She holds a Master of Science degree in Research, Evaluation, Measurement, and Statistics from the University of Kansas. Her research interests are the consequences of rapid guessing on measurement properties and individuals’ ability estimation, population invariance issues in test equating, and response invariance of selected-response items between subpopulations. She also serves as the co-director of the In-Progress Research Gala (IPRG) of Division D in AERA.
 
 
 
