@@ -13,9 +13,9 @@ Education
 ======
 * B.S. (Honors) in Applied Psychology, Hong Kong Baptist University United International College, 2018
   * Advisor: Yilung Kuo
-* M.S. in Educational Psychology and Research, GitHub University, 2020
+* M.S. in Educational Psychology and Research, University of Kansas, 2020
   * Advisor: Bruce Frey
-* Ph.D in Quantitative Methods in Education, University of Minnesota, 2014 (expected)
+* Ph.D in Quantitative Methods in Education, University of Minnesota, 2024 (expected)
   * Advisor: Joseph A. Rios
 
 Work experience
