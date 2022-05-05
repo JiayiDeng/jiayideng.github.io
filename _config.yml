@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jiayi Deng"
+title                    : "Jiayi Deng's research website"
 title_separator          : "-"
 name                     : &name "Jiayi Deng"
 description              : &description "personal description"
@@ -83,12 +83,12 @@ author:
   name             : "Jiayi Deng"
   avatar           : "profile.jpg"
   bio              : "Third Year Phd student in Quantitative method in education"
-  location         : "Minneapolis"
+  location         : "Minneapolis, MN"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : "https://scholar.google.com.hk/citations?user=rZjKaN0AAAAJ&hl=en"
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : "https://www.researchgate.net/profile/Jiayi-Deng-2"
   uri              :
   bitbucket        :
   codepen          :
@@ -102,14 +102,14 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/jiayi-deng-6b1712170/"
+  orcid            : "https://orcid.org/0000-0002-1962-2956"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "jiayideng0726"
   vine             :
   weibo            :
   xing             :
