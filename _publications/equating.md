@@ -1,7 +1,7 @@
 ---
 title: "Investigating the effect of differential rapid guessing on population invariance in equating"
 collection: publications
-permalink: /publication/equating
+# permalink: /publication/equating
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2022-04-01
 venue: '<i>Applied Psychological Measurement. </i>'

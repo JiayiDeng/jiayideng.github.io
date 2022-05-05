@@ -1,7 +1,7 @@
 ---
 title: "Side effects of large-scale assessments in education"
 collection: publications
-permalink: /publication/2019-paper
+# permalink: /publication/2019-paper
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2019-04-01
 venue: '<i>ECNU Review of Education, 2(3), 279-296.</i>'

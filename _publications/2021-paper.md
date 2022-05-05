@@ -1,7 +1,7 @@
 ---
 title: "Does the choice of response time threshold procedure matter? Implications for identifying rapid guessing behavior"
 collection: publications
-permalink: /publication/2021-paper
+# permalink: /publication/2021-paper
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021-04-01
 venue: '<i>Large-scale Assessments in Education, 9(18), 1-25.</i>'
