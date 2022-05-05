@@ -11,7 +11,7 @@ redirect_from:
 
 Download full CV here
 ======
-* [Download full CV here](http://academicpages.github.io/files/JiayiDengCV2022_04.pdf)
+* [Download full CV here](http://jiayideng.github.io/files/Jiayi Deng CV 2022_05.pdf)
 
 Education
 ======
