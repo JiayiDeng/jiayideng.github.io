@@ -6,11 +6,10 @@ collection: publications
 date: 2019-04-01
 venue: '<i>ECNU Review of Education, 2(3), 279-296.</i>'
 paperurl: 'http://jiayideng.github.io/files/SideEffect.pdf'
-citation: 'Emler, T. E., Zhao, Y., **Deng, J.**, Yin, D., & Wang, Y. (2019). Side effects of large-scale assessments in education. <i>ECNU Review of Education, 2</i>(3), 279-296.'
-abstract: 'This is the abstract' 
+# citation: ''
 ---
 
 
-Recommended citation: 
+Recommended citation: Emler, T. E., Zhao, Y., **Deng, J.**, Yin, D., & Wang, Y. (2019). Side effects of large-scale assessments in education. <i>ECNU Review of Education, 2</i>(3), 279-296.
 
 
