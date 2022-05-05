@@ -11,30 +11,38 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. (Honors) in Applied Psychology, Beijing Normal University-Hong Kong Baptist University United International College, 2018
+* M.S. in Educational Psychology and Research, GitHub University, 2020
+* Ph.D in Quantitative Methods in Education, University of Minnesota, 2014 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Summer 2022: Psychometric Intern/Research Associate
+  * Human Resource Research Organization, Louisville, KY
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* Srping 2022: Graduate Instructor
+  * Department of Educational Psychology, University of Minnesota
+  * Course: EPSY 5221 - Principles of Educational and Psychological Measurement
+
+Research Interests 
+======
+* Test-taking Effort and Rapid Guessing Responses
+* Process Data Analysis in Educational Assessments
+* (Mixture) Item Response Models 
+*	Data Visualization in Education
+*	Computer Adaptive Test Research
+*	Population Invariance Issues in Equating and Linking
+*	Response Invariance of Selected-response Items Between Subgroups
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Simulation studies (Advanced)
+* Meta-analysis (Advanced)
+* R (Advanced)
+* SPSS (Advanced)
+* HLM (Intermediate)
+* IRTPRO (Intermediate)
+* Microsoft Office (Advanced)
 
 Publications
 ======
@@ -54,6 +62,11 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Professional Service
 ======
-* Currently signed in to 43 different slack teams
+* Co-Director, In-Progress Research Gala (IPRG) for the Division D in AERA, 03/2020-06/2022
+  * Lead the IPRG program
+	* Organize IPRG monthly meeting
+  * Implement the IPRG at the AERA Annual Meeting
+
+* Student Multicultural Affairs Committee Representative, University of Kansas, 10/2019-05/2020
