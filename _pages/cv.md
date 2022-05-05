@@ -15,7 +15,7 @@ Download full CV here
 
 Education
 ======
-* B.S. (Honors) in Applied Psychology, Hong Kong Baptist University United International College, 2018
+* B.S. (Honors) in Applied Psychology, Hong Kong Baptist University, 2018
   * Advisor: Yilung Kuo
 * M.S. in Educational Psychology and Research, University of Kansas, 2020
   * Advisor: Bruce Frey
