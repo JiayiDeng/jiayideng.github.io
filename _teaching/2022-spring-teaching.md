@@ -1,7 +1,7 @@
 ---
-title: "Teaching experience"
+title: "Teaching Experience"
 collection: teaching
-type: "Workshop"
+type: "Graduate Level Course"
 permalink: /teaching/2022-spring-teaching
 venue: "University of Minnesota, Department of Educational Psychology, University of Minnesota"
 date: 2022-01-01
