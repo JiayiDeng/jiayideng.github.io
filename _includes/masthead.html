@@ -1,23 +1,37 @@
 {% include base_path %}
 
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ base_path }}/" aria-label="Jiayi Deng homepage">
+      <span class="site-brand__mark" aria-hidden="true">JD</span>
+      <span class="site-brand__text">Jiayi Deng</span>
+    </a>
+
+    <button class="site-nav__toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">
+      <span class="site-nav__toggle-bars" aria-hidden="true"></span>
+      <span class="site-nav__toggle-label">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        {% for link in site.data.navigation.main %}
+          {% assign link_url = link.url %}
+          {% if link.url contains 'http' %}
+            {% assign nav_href = link.url %}
+          {% else %}
+            {% assign nav_href = link.url | prepend: base_path %}
+          {% endif %}
+          {% assign current = false %}
+          {% if page.url == link_url or page.url == link_url | append: "index.html" %}
+            {% assign current = true %}
+          {% elsif link_url != "/" and page.url contains link_url %}
+            {% assign current = true %}
+          {% endif %}
+          <li class="site-nav__item">
+            <a class="site-nav__link{% if current %} is-active{% endif %}" href="{{ nav_href }}"{% if current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </div>
-</div>
+</header>

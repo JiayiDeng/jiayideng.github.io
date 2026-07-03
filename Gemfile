@@ -9,7 +9,19 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "github-pages", group: :jekyll_plugins
+# GitHub Pages deploys with its managed gem set. Keep this available, but local
+# validation can install with `bundle install --without github_pages` on systems
+# where Apple Ruby cannot compile the `commonmarker` dependency.
+gem "github-pages", "~> 228", group: :github_pages
+
+gem "jekyll", "~> 3.9"
+gem "ffi", "~> 1.15.0"
+gem "jekyll-paginate", "~> 1.1"
+gem "jekyll-feed", "~> 0.15"
+gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-redirect-from", "~> 0.16"
+gem "csv", "~> 3.3"
+gem "webrick", "~> 1.9"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -19,9 +31,5 @@ gem "github-pages", group: :jekyll_plugins
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  # gem "jekyll-archives"
-  gem "jekyll-feed"
-  gem 'jekyll-sitemap'
-  gem 'hawkins'
-end
+# Keep runtime plugins in the top-level list above so local validation can run
+# without old live-reload/native-extension development helpers.

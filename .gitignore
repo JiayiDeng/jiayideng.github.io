@@ -1,2 +1,7 @@
 _site/
-
+.bundle/
+.DS_Store
+Gemfile.lock
+vendor/bundle/
+vendor/bundle-ruby4/
+vendor/bundle-ruby34/

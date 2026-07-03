@@ -7,14 +7,14 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jiayi Deng's Research Website"
+title                    : "Jiayi Deng, Ph.D. | AI Fairness, Psychometrics & Human-AI Evaluation"
 title_separator          : "-"
-name                     : &name "Jiayi Deng"
-description              : &description "personal description"
+name                     : &name "Jiayi Deng, Ph.D."
+description              : &description "Applied research scientist and psychometrician designing fair, valid, human-centered AI and assessment evaluation systems."
 url                      : https://jiayideng.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "jiayideng/jiayideng.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+repository               : "JiayiDeng/jiayideng.github.io"
+teaser                   : "profile.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
@@ -62,33 +62,36 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person # Person or Organization (defaults to Person)
+  name                   : "Jiayi Deng, Ph.D." # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://github.com/JiayiDeng"
+    - "https://scholar.google.com.hk/citations?user=rZjKaN0AAAAJ&hl=en"
+    - "https://orcid.org/0000-0002-1962-2956"
 
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Jiayi Deng"
+  name             : "Jiayi Deng, Ph.D."
   avatar           : "profile.jpg"
-  bio              : "Second-year Phd Student in Quantitative Methods in Education, University of Minnesota."
-  location         : "Minneapolis, MN"
-  employer         :
+  bio              : "Applied research scientist and psychometrician working on AI fairness, human-AI evaluation, and high-impact measurement systems."
+  location         : "New York Metro"
+  employer         : "Human Resources Research Organization"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com.hk/citations?user=rZjKaN0AAAAJ&hl=en"
-  email            : "deng0194@umn.edu"
-  researchgate     : "https://www.researchgate.net/profile/Jiayi-Deng-2"
+  email            : "etheldeng0726@gmail.com"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -96,20 +99,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "jiayideng"
+  github           : "JiayiDeng"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "jiayi-deng-6b1712170"
+  linkedin         :
   orcid            : "https://orcid.org/0000-0002-1962-2956"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "jiayideng0726"
+  twitter          :
   vine             :
   weibo            :
   xing             :
@@ -123,6 +126,15 @@ include:
   - _pages
   - files
 exclude:
+  - .DS_Store
+  - .agent
+  - AGENTS.md
+  - CONTENT_DECK.md
+  - CURRENT_SITE_AUDIT.md
+  - DESIGN_SYSTEM.md
+  - PACKAGE_MANIFEST.json
+  - PLANS.md
+  - PROJECT_SPEC.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -144,6 +156,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - scripts
   - tmp
   - vendor
 keep_files:
@@ -271,6 +284,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-redirect-from
   - jemoji
 
 

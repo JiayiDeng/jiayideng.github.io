@@ -1,0 +1,20 @@
+{
+  "package_name": "JiayiDeng Personal Website Codex Project",
+  "target_repository": "JiayiDeng/jiayideng.github.io",
+  "generated_on": "2026-07-03",
+  "resume_asset": "assets/Jiayi_Deng_Resume_2026.pdf",
+  "files": [
+    ".agent/PLANS.md",
+    "AGENTS.md",
+    "CODEX_INITIAL_PROMPT.md",
+    "CODEX_REVIEW_PROMPT.md",
+    "CONTENT_DECK.md",
+    "CURRENT_SITE_AUDIT.md",
+    "DESIGN_SYSTEM.md",
+    "PLANS.md",
+    "PROJECT_SPEC.md",
+    "README_FOR_YOU.md",
+    "assets/Jiayi_Deng_Resume_2026.pdf",
+    "assets/README.md"
+  ]
+}
