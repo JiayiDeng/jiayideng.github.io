@@ -109,6 +109,7 @@ Non-goals:
 - 2026-07-03: Fixed local asset URL handling by changing `_includes/base_path` to use `site.baseurl` instead of the absolute public URL.
 - 2026-07-03: Added `scripts/check_site.rb` generated-site smoke checker and ran production build, link/content checks, browser QA, and screenshots.
 - 2026-07-03: Verified GitHub CLI authentication for account `JiayiDeng`; push/PR creation is available.
+- 2026-07-03: Committed `7c92654e4c6c35c869502625b7869d1a9b69c181`, pushed branch `codex/refresh-personal-website`, and opened draft PR `https://github.com/JiayiDeng/jiayideng.github.io/pull/1`.
 
 ## 9. Decisions and Discoveries
 
@@ -161,6 +162,11 @@ Non-goals:
   - `.agent/screenshots/research-desktop-1440-viewport.png`
   - `.agent/screenshots/contact-mobile-390-viewport.png`
   - `.agent/screenshots/legacy-publication-desktop-1440-viewport.png`
+- Git/GitHub:
+  - `git commit -m "Refresh professional website"` created `7c92654e4c6c35c869502625b7869d1a9b69c181`.
+  - `git push -u origin codex/refresh-personal-website` passed.
+  - `/opt/homebrew/bin/gh pr create --draft --base master --head codex/refresh-personal-website ...` created `https://github.com/JiayiDeng/jiayideng.github.io/pull/1`.
+  - `/opt/homebrew/bin/gh pr view 1 --json url,isDraft,headRefName,baseRefName,state,statusCheckRollup` returned draft/open PR with empty `statusCheckRollup`.
 
 ## 11. Remaining Risks and Handoff
 
