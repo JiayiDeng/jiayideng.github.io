@@ -1,0 +1,521 @@
+entries:
+  - id: optimizing-reading-comprehension-2026
+    category: journal
+    public: true
+    featured: true
+    year: 2026
+    sort_date: 2026-04-25
+    authors:
+      - "Biancarosa, G."
+      - "Kennedy, P. C."
+      - "Lee, S. B."
+      - "DeWeese, J. N."
+      - "Wong, Y. L."
+      - "Deng, J."
+      - "Weiss, D. J."
+      - "Davison, M. L."
+    title: "Optimizing measurement precision and diagnosticity for a two-dimensional assessment of reading comprehension"
+    venue: "Educational Assessment"
+    pages: "1-20"
+    doi: "10.1080/10627197.2026.2656892"
+    external_url: "https://www.tandfonline.com/doi/full/10.1080/10627197.2026.2656892"
+    external_label: "View publisher page"
+    verification_source: "Crossref/Taylor & Francis DOI metadata"
+
+  - id: linking-errors-2025
+    category: journal
+    public: true
+    featured: true
+    year: 2025
+    sort_date: 2025-08-14
+    authors:
+      - "Deng, J."
+    title: "Linking errors introduced by rapid guessing responses when employing multigroup concurrent IRT scaling"
+    venue: "Large-scale Assessments in Education"
+    volume: "13"
+    issue: "1"
+    article_number: "28"
+    doi: "10.1186/s40536-025-00265-8"
+    external_url: "https://largescaleassessmentsineducation.springeropen.com/articles/10.1186/s40536-025-00265-8"
+    external_label: "View publisher page"
+    verification_source: "Crossref/Springer Nature metadata"
+
+  - id: irtree-module-2025
+    category: journal
+    public: true
+    featured: true
+    year: 2025
+    sort_date: 2025-03-01
+    authors:
+      - "Kim, N."
+      - "Deng, J."
+      - "Wong, Y. L."
+    title: "Digital Module 37: Introduction to item response tree (IRTree) models"
+    venue: "Educational Measurement: Issues and Practice"
+    volume: "44"
+    issue: "1"
+    pages: "109-110"
+    doi: "10.1111/emip.12665"
+    external_url: "https://onlinelibrary.wiley.com/doi/10.1111/emip.12665"
+    external_label: "View publisher page"
+    verification_source: "Crossref/Wiley DOI metadata"
+
+  - id: effort-moderated-scoring-2025
+    category: journal
+    public: true
+    featured: true
+    year: 2025
+    online_first_year: 2024
+    sort_date: 2025-02-01
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+    title: "Is effort-moderated scoring robust to multidimensional rapid guessing?"
+    venue: "Educational and Psychological Measurement"
+    volume: "85"
+    issue: "1"
+    pages: "134-155"
+    doi: "10.1177/00131644241246749"
+    external_url: "https://journals.sagepub.com/doi/10.1177/00131644241246749"
+    external_label: "View publisher page"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: aberrance-apm-2024
+    category: journal
+    public: true
+    featured: true
+    year: 2024
+    sort_date: 2024-07-01
+    authors:
+      - "Gorney, K."
+      - "Deng, J."
+    title: "aberrance: An R package for detecting aberrant behavior in test data"
+    venue: "Applied Psychological Measurement"
+    volume: "48"
+    issue: "4-5"
+    pages: "230-231"
+    doi: "10.1177/01466216241261707"
+    external_url: "https://journals.sagepub.com/doi/10.1177/01466216241261707"
+    external_label: "View publisher page"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: response-time-thresholds-2024
+    category: journal
+    public: true
+    year: 2024
+    online_first_year: 2023
+    sort_date: 2024-04-01
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+    title: "A comparison of response time threshold scoring procedures in mitigating bias from rapid guessing behavior"
+    venue: "Educational and Psychological Measurement"
+    volume: "84"
+    issue: "2"
+    pages: "387-420"
+    doi: "10.1177/00131644231168398"
+    external_url: "https://journals.sagepub.com/doi/10.1177/00131644231168398"
+    external_label: "View publisher page"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: equating-2022
+    category: journal
+    public: true
+    featured: true
+    year: 2022
+    sort_date: 2022-10-01
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+    title: "Investigating the effect of differential rapid guessing on population invariance in equating"
+    venue: "Applied Psychological Measurement"
+    volume: "46"
+    issue: "7"
+    pages: "589-604"
+    doi: "10.1177/01466216221108991"
+    external_url: "https://journals.sagepub.com/doi/10.1177/01466216221108991"
+    external_label: "View publisher page"
+    legacy_url: "/publications/equating/"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: aggregated-rapid-guessing-2022
+    category: journal
+    public: true
+    year: 2022
+    sort_date: 2022-10-02
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+      - "Ihlenfeldt, S. D."
+    title: "To what degree does rapid guessing distort aggregated test scores? A meta-analytic investigation"
+    venue: "Educational Assessment"
+    volume: "27"
+    issue: "4"
+    pages: "356-373"
+    doi: "10.1080/10627197.2022.2110465"
+    external_url: "https://www.tandfonline.com/doi/full/10.1080/10627197.2022.2110465"
+    external_label: "View publisher page"
+    verification_source: "Crossref/Taylor & Francis DOI metadata"
+
+  - id: coefficient-alpha-2022
+    category: journal
+    public: true
+    year: 2022
+    online_first_year: 2021
+    sort_date: 2022-01-01
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+    title: "Quantifying the distorting effect of rapid guessing on estimates of coefficient alpha"
+    venue: "Applied Psychological Measurement"
+    volume: "46"
+    issue: "1"
+    pages: "40-52"
+    doi: "10.1177/01466216211051719"
+    external_url: "https://journals.sagepub.com/doi/10.1177/01466216211051719"
+    external_label: "View publisher page"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: response-time-threshold-meta-2021
+    category: journal
+    public: true
+    year: 2021
+    sort_date: 2021-12-01
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+    title: "Does the choice of response time threshold procedure substantially affect inferences concerning the identification and exclusion of rapid guessing responses? A meta-analysis"
+    venue: "Large-scale Assessments in Education"
+    volume: "9"
+    issue: "1"
+    article_number: "18"
+    doi: "10.1186/s40536-021-00110-8"
+    external_url: "https://largescaleassessmentsineducation.springeropen.com/articles/10.1186/s40536-021-00110-8"
+    external_label: "View publisher page"
+    legacy_url: "/publications/2021-paper/"
+    verification_source: "Crossref/Springer Nature metadata"
+
+  - id: lsa-side-effects-2019
+    category: journal
+    public: true
+    year: 2019
+    sort_date: 2019-09-01
+    authors:
+      - "Emler, T. E."
+      - "Zhao, Y."
+      - "Deng, J."
+      - "Yin, D."
+      - "Wang, Y."
+    title: "Side effects of large-scale assessments in education"
+    venue: "ECNU Review of Education"
+    volume: "2"
+    issue: "3"
+    pages: "279-296"
+    doi: "10.1177/2096531119878964"
+    external_url: "https://journals.sagepub.com/doi/10.1177/2096531119878964"
+    external_label: "View publisher page"
+    verification_source: "Crossref/SAGE DOI metadata"
+
+  - id: aberrance-cran-2025
+    category: software
+    public: true
+    year: 2025
+    sort_date: 2025-08-20
+    package_name: "aberrance"
+    version: "0.3.0"
+    title: "aberrance: Detect aberrant behavior in test data"
+    description: "An R package for detecting several forms of aberrant behavior in test data, including answer copying, response similarity, change points, misfit, preknowledge, rapid guessing, and test tampering."
+    venue: "Comprehensive R Archive Network (CRAN)"
+    authors:
+      - "Gorney, K."
+      - "Deng, J."
+    doi: "10.32614/CRAN.package.aberrance"
+    external_url: "https://CRAN.R-project.org/package=aberrance"
+    external_label: "View on CRAN"
+    source_url: "https://github.com/kyliegorney/aberrance"
+    source_label: "View source repository"
+    verification_source: "CRAN package page"
+
+  - id: ai-motivation-meta-analysis
+    category: manuscript
+    public: false
+    needs_verification: true
+    authors:
+      - "Wang, Y."
+      - "Deng, J."
+    title: "Can AI motivate students? A systematic review and meta-analysis on AI's role in student motivation and engagement"
+    status: "Needs user confirmation before public release"
+
+  - id: emotional-competence-online-readiness
+    category: manuscript
+    public: false
+    needs_verification: true
+    authors:
+      - "Wang, Y."
+      - "Deng, J."
+    title: "Beyond self-regulated learning: Exploring the roles of emotional competence and online learning readiness pre- and post-COVID-19 in high school students' math performance?"
+    status: "Needs user confirmation before public release"
+
+  - id: ncme-linking-errors-2025
+    category: presentation
+    public: false
+    needs_verification: true
+    year: 2025
+    sort_date: 2025-04-01
+    authors:
+      - "Deng, J."
+    title: "Linking errors introduced by rapid guessing responses when employing multigroup concurrent IRT scaling"
+    presentation_type: "Paper presentation"
+    conference: "National Council on Measurement in Education 2025 Annual Meeting"
+    location: "Denver, CO"
+    status: "Submitted proposal in supplied inventory; acceptance/presentation needs verification"
+
+  - id: ncme-test-wiseness-2024
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2024
+    sort_date: 2024-04-01
+    authors:
+      - "Deng, J."
+      - "Becker, K."
+    title: "Investigating the impact of test wiseness in multiple response items: A simulation study"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2024 Annual Meeting"
+    location: "Philadelphia, PA"
+
+  - id: ncme-item-parameter-estimates-2024
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2024
+    sort_date: 2024-04-01
+    authors:
+      - "Deng, J."
+      - "Wong, Y. L."
+      - "DeWeese, J. N."
+      - "Lee, S. B."
+      - "Kennedy, P. C."
+      - "Biancarosa, G."
+      - "Weiss, D. J."
+      - "Davison, M. L."
+    title: "A comparison of item parameter estimates between three- and five-option multiple-choice items"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2024 Annual Meeting"
+    location: "Philadelphia, PA"
+
+  - id: ncme-aberrance-2024
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2024
+    sort_date: 2024-04-01
+    authors:
+      - "Gorney, K."
+      - "Deng, J."
+    title: "aberrance: An R package to detect aberrance in test data"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2024 Annual Meeting"
+    location: "Philadelphia, PA"
+
+  - id: aera-adaptive-testing-2024
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2024
+    sort_date: 2024-04-01
+    authors:
+      - "Wong, Y. L."
+      - "DeWeese, J. N."
+      - "Deng, J."
+      - "Davison, M. L."
+    title: "Increasing diagnosticity of low-stakes tests with adaptive testing"
+    presentation_type: "[Paper presentation]"
+    conference: "American Educational Research Association 2024 Annual Meeting"
+    location: "Philadelphia, PA"
+
+  - id: test-security-aberrance-2023
+    category: presentation
+    public: true
+    needs_verification: true
+    year: 2023
+    sort_date: 2023-10-01
+    authors:
+      - "Gorney, K."
+      - "Deng, J."
+    title: "aberrance: An R package to detect aberrance in test data"
+    presentation_type: "[Paper presentation]"
+    conference: "Conference on Test Security 2023"
+    location: "Tempe, AZ"
+
+  - id: ncme-scoring-approaches-2023
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2023
+    sort_date: 2023-04-12
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+      - "Martinez, A. J."
+    title: "A comparison of rapid guessing scoring approaches: An applied analysis"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2023 Annual Meeting"
+    location: "Chicago, IL"
+
+  - id: ncme-hg-mi-2023
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2023
+    sort_date: 2023-04-12
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+      - "Martinez, A. J."
+    title: "HG-MI scoring: A two-stage ability estimation procedure for handling rapid guessing"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2023 Annual Meeting"
+    location: "Chicago, IL"
+
+  - id: ncme-rt-thresholds-2023
+    category: presentation
+    public: true
+    selected_talk: true
+    year: 2023
+    sort_date: 2023-04-12
+    authors:
+      - "Rios, J. A."
+      - "Deng, J."
+    title: "A comparison of response time threshold scoring procedures for handling rapid guessing"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2023 Annual Meeting"
+    location: "Chicago, IL"
+
+  - id: ncme-equating-2022
+    category: presentation
+    public: true
+    year: 2022
+    sort_date: 2022-04-09
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+    title: "Investigating the effect of differential rapid guessing on population invariance in equating"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2022 Annual Meeting"
+    location: "Virtual"
+    legacy_url: "/talks/2022-04-09"
+
+  - id: ncme-distort-test-performance-2022
+    category: presentation
+    public: true
+    year: 2022
+    sort_date: 2022-04-22
+    authors:
+      - "Deng, J."
+      - "Ihlenfeldt, S. D."
+      - "Rios, J. A."
+    title: "To what degree does rapid guessing distort test performance? A meta-analytic investigation"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2022 Annual Meeting"
+    location: "San Diego, CA"
+    legacy_url: "/talks/2022-04-25"
+
+  - id: ncme-multistage-rg-2022
+    category: presentation
+    public: true
+    year: 2022
+    sort_date: 2022-04-22
+    authors:
+      - "Ihlenfeldt, S. D."
+      - "Deng, J."
+    title: "Evaluating rapid guessing response patterns on a multistage assessment: A simulation study"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2022 Annual Meeting"
+    location: "San Diego, CA"
+    legacy_url: "/talks/2022-04-23"
+
+  - id: research-day-equating-2022
+    category: presentation
+    public: true
+    year: 2022
+    sort_date: 2022-02-04
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+    title: "Investigating the effect of differential rapid guessing on population invariance in equating"
+    presentation_type: "[Paper presentation]"
+    conference: "Department of Educational Psychology Graduate Student Research Day"
+    location: "Minneapolis, MN"
+    legacy_url: "/talks/RD2022"
+
+  - id: research-day-alpha-2021
+    category: presentation
+    public: true
+    year: 2021
+    sort_date: 2021-03-23
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+    title: "Quantifying the biasing effect of rapid guessing on estimates of coefficient alpha"
+    presentation_type: "[Poster presentation]"
+    conference: "College of Education and Human Development Research Day"
+    location: "Minneapolis, MN"
+    legacy_url: "/talks/RD2021"
+
+  - id: ncme-rt-threshold-meta-2021
+    category: presentation
+    public: true
+    year: 2021
+    sort_date: 2021-06-08
+    authors:
+      - "Deng, J."
+      - "Rios, J. A."
+    title: "Does the choice of response time threshold procedure matter? Implications for identifying rapid guessing behavior"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2021 Annual Meeting"
+    location: "Virtual"
+    legacy_url: "/talks/ncme2021-1"
+
+  - id: ncme-ddf-dif-2021
+    category: presentation
+    public: true
+    year: 2021
+    sort_date: 2021-06-08
+    authors:
+      - "Deng, J."
+    title: "The relationship between differential distractor functioning (DDF) and differential item functioning (DIF): If DDF occurs, must DIF occur?"
+    presentation_type: "[Paper presentation]"
+    conference: "National Council on Measurement in Education 2021 Annual Meeting"
+    location: "Virtual"
+    legacy_url: "/talks/ncme2021-2"
+
+  - id: aera-country-performance-2020
+    category: presentation
+    public: true
+    year: 2020
+    sort_date: 2020-04-17
+    authors:
+      - "Poggio, J."
+      - "Akin-Tas, M."
+      - "Deng, J."
+      - "Esiaka, C."
+    title: "The nature of country performance differences via distractor analyses: Examining comparability of international assessment outcomes"
+    presentation_type: "[Poster presentation]"
+    conference: "American Educational Research Association 2020 Annual Meeting"
+    location: "San Francisco, CA"
+    status_note: "Accepted for the 2020 Annual Meeting; AERA canceled the in-person meeting."
+    legacy_url: "/talks/aera"
+
+  - id: caerda-reading-fluency-2019
+    category: presentation
+    public: true
+    year: 2019
+    sort_date: 2019-06-06
+    authors:
+      - "Deng, J."
+    title: "Impact of isolated word and contextual training on reading fluency and comprehension for Chinese children"
+    presentation_type: "[Paper presentation]"
+    conference: "Chinese American Educational Research and Development Association (CAERDA) International Conference"
+    location: "Xi'an, China"
+    legacy_url: "/talks/china"

@@ -40,34 +40,17 @@ eyebrow: "Research"
   <div class="section-heading section-heading--row">
     <div>
       <p class="eyebrow">Selected publications</p>
-      <h2 id="selected-publications">Relevant publications and manuscripts</h2>
+      <h2 id="selected-publications">Selected peer-reviewed publications</h2>
     </div>
     <a class="button button--secondary" href="https://scholar.google.com.hk/citations?user=rZjKaN0AAAAJ&amp;hl=en">Google Scholar</a>
   </div>
   <div class="publication-list">
-    <article class="publication-item">
-      <p class="publication-item__status">Under review</p>
-      <h3>Can AI Motivate Students? A Systematic Review and Meta-analysis on AI's Role in Student Motivation and Engagement.</h3>
-    </article>
-    <article class="publication-item">
-      <p class="publication-item__status">Applied Psychological Measurement · 2024</p>
-      <h3>Gorney, K., &amp; Deng, J. `aberrance`: An R package for detecting aberrant behavior in test data.</h3>
-    </article>
-    <article class="publication-item">
-      <p class="publication-item__status">Educational and Psychological Measurement · 2024</p>
-      <h3>Rios, J. A., &amp; Deng, J. Is effort-moderated scoring robust to multidimensional rapid guessing?</h3>
-    </article>
-    <article class="publication-item">
-      <p class="publication-item__status">Applied Psychological Measurement · 2022</p>
-      <h3>Deng, J., &amp; Rios, J. A. Investigating the effect of differential rapid guessing on population invariance in equating.</h3>
-      <p><a href="/publications/equating/">Read publication entry</a></p>
-    </article>
-    <article class="publication-item">
-      <p class="publication-item__status">Large-scale Assessments in Education · 2021</p>
-      <h3>Rios, J. A., &amp; Deng, J. Does the choice of response time threshold procedure matter? Implications for identifying rapid guessing behavior.</h3>
-      <p><a href="/publications/2021-paper/">Read publication entry</a></p>
-    </article>
+    {% assign selected_publications = site.data.scholarship.entries | where: "category", "journal" | where: "public", true | where: "featured", true | sort: "sort_date" | reverse %}
+    {% for entry in selected_publications %}
+      {% include scholarship-citation.html entry=entry heading_level=3 show_legacy_link=true %}
+    {% endfor %}
   </div>
+  <p class="section-action"><a href="/publications/">View all peer-reviewed publications and software</a></p>
 </section>
 
 <section class="section-block split-section" aria-labelledby="software-methods">
@@ -75,6 +58,10 @@ eyebrow: "Research"
     <p class="eyebrow">Methods and software</p>
     <h2 id="software-methods">Reproducible measurement and evaluation tools</h2>
     <p>Jiayi's work includes open-source statistical software, simulation studies, meta-analysis, response-time methods, and reproducible project artifacts such as model cards, dataset cards, monitoring plans, and decision logs.</p>
+    {% assign software = site.data.scholarship.entries | where: "category", "software" | where: "public", true | first %}
+    {% if software %}
+      <p><strong>{{ software.package_name }}</strong> is available through CRAN with package DOI <a href="https://doi.org/{{ software.doi }}">{{ software.doi }}</a>.</p>
+    {% endif %}
   </div>
   <div class="info-card info-card--accent">
     <h3>Human-AI Fairness Audit Lab</h3>
