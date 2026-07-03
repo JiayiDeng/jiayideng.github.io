@@ -1,0 +1,66 @@
+{% assign entry = include.entry %}
+{% assign heading_level = include.heading_level | default: 3 %}
+
+<article class="publication-item{% if include.compact %} publication-item--compact{% endif %}">
+  <p class="publication-item__status">
+    {% if entry.category == "presentation" %}
+      {{ entry.year }}{% if entry.conference %} · {{ entry.conference }}{% endif %}
+    {% elsif entry.category == "software" %}
+      Open-source software · {{ entry.year }}
+    {% else %}
+      {{ entry.year }}{% if entry.venue %} · {{ entry.venue }}{% endif %}
+    {% endif %}
+  </p>
+
+  <h{{ heading_level }}>
+    {% if entry.legacy_url and include.link_title %}
+      <a href="{{ entry.legacy_url | relative_url }}">{{ entry.title }}</a>
+    {% else %}
+      {{ entry.title }}
+    {% endif %}
+  </h{{ heading_level }}>
+
+  {% if entry.description %}
+    <p>{{ entry.description }}</p>
+  {% endif %}
+
+  {% if entry.authors %}
+    <p class="publication-item__authors">
+      {%- for author in entry.authors -%}
+        {%- unless forloop.first -%}
+          {% if forloop.last %}, &amp; {% else %}, {% endif %}
+        {%- endunless -%}
+        {%- if author == "Deng, J." -%}<strong>{{ author }}</strong>{%- else -%}{{ author }}{%- endif -%}
+      {%- endfor %}
+      ({{ entry.year }}).
+    </p>
+  {% endif %}
+
+  {% if entry.category == "journal" %}
+    <p class="publication-item__meta">
+      <em>{{ entry.venue }}</em>{% if entry.volume %}, <em>{{ entry.volume }}</em>{% endif %}{% if entry.issue %}({{ entry.issue }}){% endif %}{% if entry.pages %}, {{ entry.pages }}{% elsif entry.article_number %}, Article {{ entry.article_number }}{% endif %}.
+      {% if entry.online_first_year and entry.online_first_year != entry.year %}<span class="publication-item__note">Online first {{ entry.online_first_year }}.</span>{% endif %}
+    </p>
+  {% elsif entry.category == "software" %}
+    <p class="publication-item__meta">
+      {{ entry.package_name }}{% if entry.version %} {{ entry.version }}{% endif %}. {{ entry.venue }}.
+    </p>
+  {% elsif entry.category == "presentation" %}
+    <p class="publication-item__meta">
+      {{ entry.presentation_type }}. {{ entry.conference }}{% if entry.location %}, {{ entry.location }}{% endif %}.{% if entry.status_note %} <span class="publication-item__note">{{ entry.status_note }}</span>{% endif %}
+    </p>
+  {% endif %}
+
+  {% assign has_links = false %}
+  {% if entry.doi or entry.external_url or entry.source_url or entry.legacy_url %}
+    {% assign has_links = true %}
+  {% endif %}
+  {% if has_links %}
+    <p class="publication-item__links">
+      {% if entry.doi %}<a href="https://doi.org/{{ entry.doi }}">DOI</a>{% endif %}
+      {% if entry.external_url %}{% if entry.doi %}<span aria-hidden="true"> · </span>{% endif %}<a href="{{ entry.external_url }}">{{ entry.external_label | default: "View publisher page" }}</a>{% endif %}
+      {% if entry.source_url %}{% if entry.doi or entry.external_url %}<span aria-hidden="true"> · </span>{% endif %}<a href="{{ entry.source_url }}">{{ entry.source_label | default: "View source repository" }}</a>{% endif %}
+      {% if entry.legacy_url and include.show_legacy_link %}{% if entry.doi or entry.external_url or entry.source_url %}<span aria-hidden="true"> · </span>{% endif %}<a href="{{ entry.legacy_url | relative_url }}">Publication entry</a>{% endif %}
+    </p>
+  {% endif %}
+</article>

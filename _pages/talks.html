@@ -1,16 +1,42 @@
 ---
-layout: archive
+layout: page
 title: "Talks and presentations"
 permalink: /talks/
-author_profile: true
+description: "Conference presentations by Jiayi Deng, grouped by year."
+eyebrow: "Academic archive"
+author_profile: false
 ---
 
-{% if site.talkmap_link == true %}
+<section class="section-block section-block--first" aria-labelledby="selected-presentations">
+  <div class="section-heading">
+    <p class="eyebrow">Selected presentations</p>
+    <h2 id="selected-presentations">Recent and relevant conference presentations</h2>
+  </div>
+  <div class="publication-list">
+    {% assign selected_presentations = site.data.scholarship.entries | where: "category", "presentation" | where: "public", true | where: "selected_talk", true | sort: "sort_date" | reverse %}
+    {% for entry in selected_presentations %}
+      {% include scholarship-citation.html entry=entry heading_level=3 %}
+    {% endfor %}
+  </div>
+</section>
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<section class="section-block" aria-labelledby="presentation-archive">
+  <div class="section-heading">
+    <p class="eyebrow">Archive</p>
+    <h2 id="presentation-archive">Conference presentations by year</h2>
+  </div>
 
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+  {% assign presentations = site.data.scholarship.entries | where: "category", "presentation" | where: "public", true | sort: "sort_date" | reverse %}
+  {% assign current_year = "" %}
+  {% for entry in presentations %}
+    {% assign entry_year = entry.year | append: "" %}
+    {% if entry_year != current_year %}
+      {% unless forloop.first %}</div>{% endunless %}
+      <h3 class="archive-year">{{ entry.year }}</h3>
+      <div class="publication-list publication-list--archive">
+      {% assign current_year = entry_year %}
+    {% endif %}
+    {% include scholarship-citation.html entry=entry heading_level=4 show_legacy_link=true %}
+    {% if forloop.last %}</div>{% endif %}
+  {% endfor %}
+</section>

@@ -2,6 +2,7 @@ _site/
 .bundle/
 .DS_Store
 Gemfile.lock
+PUBLICATIONS.docx
 vendor/bundle/
 vendor/bundle-ruby4/
 vendor/bundle-ruby34/

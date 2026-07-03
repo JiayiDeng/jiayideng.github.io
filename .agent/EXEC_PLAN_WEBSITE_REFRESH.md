@@ -1,175 +1,172 @@
-# Execution Plan: Jiayi Deng Website Refresh
+# Execution Plan: Scholarly Work Corrections
 
-## 1. Goal and User-Visible Outcome
+## Goal and User-Visible Outcome
 
-Refresh `JiayiDeng/jiayideng.github.io` into a polished professional GitHub Pages website for Jiayi Deng, Ph.D., positioning her as an applied research scientist and psychometrician working on AI fairness, human-AI evaluation, psychometric validity, and high-impact measurement systems.
+Update Jiayi Deng's scholarly-work sections from the supplied `PUBLICATIONS.docx` inventory while excluding all technical reports from public output. The public site should render Research, Publications, and Talks from a canonical scholarship data source, with verified peer-reviewed journal articles, a separate software entry for the `aberrance` R package, and normalized conference presentations.
 
-Expected public outcome:
+## Current Repository State and Architecture
 
-- Current identity visible above the fold.
-- Primary navigation: Home, Research, Projects, Resume, Contact.
-- Human-AI Fairness Audit Lab featured with live demo, source link, and synthetic/non-hiring boundaries.
-- Resume PDF available at `/files/Jiayi_Deng_Resume_2026.pdf`.
-- Existing publications, talks, teaching, and legacy archive routes preserved.
-- GitHub Pages-compatible Jekyll build.
+- Repository: `JiayiDeng/jiayideng.github.io`
+- Base branch: `master`, pulled from `origin/master` with `git pull --ff-only origin master` on 2026-07-03; already up to date.
+- Working branch: `codex/correct-publications-no-reports`
+- User-supplied file: `PUBLICATIONS.docx` remains local and is ignored via `.gitignore` so it is not published or committed.
+- Site architecture: GitHub Pages-compatible Jekyll site using `_pages`, `_publications`, `_talks`, `_data`, `_layouts`, `_includes`, and SCSS from `assets/css/main.scss`.
+- Scholarly pages before edits:
+  - `_pages/research.md` manually lists selected publications and includes an unverified manuscript status.
+  - `_pages/publications.md` renders `_publications` collection records.
+  - `_pages/talks.html` renders `_talks` collection records.
+  - `_publications/equating.md` still labels the published article as accepted.
+  - Several legacy publication/talk records have punctuation, title-case, and metadata issues.
+- Build/test support: `Gemfile`, Jekyll build, and `scripts/check_site.rb` generated-site smoke check.
 
-## 2. Current Repository State and Build/Deployment Architecture
+## Scope
 
-- Starting branch observed: `master`.
-- Default remote branch: `origin/master`.
-- Working branch created: `codex/refresh-personal-website`.
-- Remote: `origin https://github.com/JiayiDeng/jiayideng.github.io.git`.
-- Current architecture: Jekyll/GitHub Pages, AcademicPages/Minimal Mistakes-derived theme.
-- Build dependencies: `Gemfile` with `github-pages`, `jekyll-feed`, `jekyll-sitemap`, `hawkins`.
-- No `.github` workflow directory found; deployment appears to rely on repository-level GitHub Pages behavior.
-- Existing collections: `_publications`, `_talks`, `_teaching`, `_portfolio`.
-- Important current dirty worktree before implementation:
-  - Deleted legacy generated assets under `assets/css`, `assets/js`, and `assets/fonts`.
-  - Untracked refresh documents, package manifest, `.agent/`, and `assets/Jiayi_Deng_Resume_2026.pdf`.
-  - `.DS_Store` untracked and should not be committed.
+- Add `_data/scholarship.yml` as the canonical public/maintenance source for journal, software, manuscript, and presentation records.
+- Render `/research/`, `/publications/`, and `/talks/` from canonical data.
+- Keep technical reports entirely out of public data and rendered site.
+- Keep unverified manuscript records private in data, marked `public: false` and `needs_verification: true`.
+- Preserve existing collection routes and update at least `_publications/equating.md` and `_publications/2021-paper.md`.
+- Update `scripts/check_site.rb` to enforce scholarly-content integrity.
+- Run build, generated-site checks, and browser QA with screenshots.
 
-## 3. Scope and Explicit Non-Goals
+## Explicit Non-Goals
 
-In scope:
+- Do not change the site's overall refreshed design or unrelated pages.
+- Do not publish DOCX source content, technical report titles, report numbers, clients, or confidential/internal details.
+- Do not publish unverified manuscript statuses or target journals.
+- Do not add citation counts, impact factors, analytics, external fonts, or new production frameworks.
+- Do not merge the resulting pull request.
 
-- Content, IA, SEO, accessibility, visual system, templates, primary pages, redirects, resume PDF copy, local validation, screenshots, commits.
+## Information Architecture and Content Map
 
-Non-goals:
+- `/research/`
+  - Keep research themes.
+  - Selected peer-reviewed publications: six specified titles, newest-to-oldest, drawn from `_data/scholarship.yml`.
+  - Link to full `/publications/` and Google Scholar.
+  - Software/methods section should reference `aberrance` software and Human-AI Fairness Audit Lab without duplicating journal records.
+- `/publications/`
+  - `Peer-Reviewed Journal Articles` section with 11 verified public journal records.
+  - `Software` section with the CRAN `aberrance` package record.
+  - Link to `/talks/`.
+  - No technical reports or unverified manuscripts.
+- `/talks/`
+  - Selected presentations section for recent/relevant verified presentations.
+  - Complete archive grouped by year, newest first, from public presentation records.
+  - The 2025 NCME submitted proposal remains private unless official acceptance/presentation is verified.
+- Legacy routes:
+  - Keep `_publications/*` and `_talks/*` routes compatible.
+  - Update visible citations to canonical/verified metadata where practical.
 
-- Framework migration.
-- Third-party analytics or external font loading.
-- Publishing DOCX source or confidential/non-public material.
-- Claiming GitHub Pages deployment, push, or PR without verified authentication and successful commands.
+## Verification Sources and Decisions
 
-## 4. Information Architecture and Content Migration Map
+- `PUBLICATIONS.docx` extracted as inventory on 2026-07-03.
+- Journal metadata verified through Crossref plus publisher pages where article numbers were needed:
+  - Taylor & Francis DOI metadata: `10.1080/10627197.2026.2656892`, `10.1080/10627197.2022.2110465`.
+  - Springer Nature/Large-scale Assessments in Education metadata: `10.1186/s40536-025-00265-8`, `10.1186/s40536-021-00110-8`.
+  - Wiley DOI metadata: `10.1111/emip.12665`.
+  - SAGE DOI metadata: `10.1177/00131644241246749`, `10.1177/01466216241261707`, `10.1177/00131644231168398`, `10.1177/01466216221108991`, `10.1177/01466216211051719`, `10.1177/2096531119878964`.
+- Software metadata verified from CRAN: `https://CRAN.R-project.org/package=aberrance`, package DOI `10.32614/CRAN.package.aberrance`, listed authors Kylie Gorney and Jiayi Deng, and CRAN-listed source repository `https://github.com/kyliegorney/aberrance`.
+- AERA 2020 handled conservatively using AERA's cancellation notice: the record is described as accepted for the 2020 Annual Meeting with the in-person meeting canceled, not as a completed in-person presentation.
+- Decision: technical reports are intentionally out of scope and will not be added to `_data/scholarship.yml`.
+- Decision: two manuscript records will be retained only as private maintenance records unless user confirms current public status.
+- Decision: the 2025 NCME proposal record is retained as `public: false` and `needs_verification: true`; it is not rendered as a completed presentation.
+- Decision: formal issue/print date drives display ordering where available; online-first year is kept separately when it differs.
 
-- `/`: modern homepage replacing stale graduate-student about page.
-- `/research/`: new research overview with selected themes and publication archive access.
-- `/publications/`: preserved compatibility route, restyled as publication archive / redirect-equivalent page.
-- `/projects/`: selected project grid featuring Human-AI Fairness Audit Lab and verified public work.
-- `/projects/human-ai-fairness-audit/`: new case-study page.
-- `/resume/`: canonical resume page with concise HTML summary and PDF CTA.
-- `/cv/`: compatibility route to resume content or redirect.
-- `/contact/`: public email and verified profiles.
-- `/talks/`, `/teaching/`, collection item URLs: preserve and restyle.
+## Accessibility, SEO, Performance, and Privacy
 
-## 5. Visual/Design Implementation Plan
+- Use semantic headings and existing accessible page shell.
+- Ensure citation links have meaningful labels: DOI, View publisher page, View on CRAN, View source repository.
+- No empty `href`, placeholder links, local file paths, or confidential technical report strings in generated HTML.
+- Long citations must wrap on mobile without horizontal overflow.
 
-- Replace dependency on deleted legacy generated CSS/JS with first-party `assets/css/main.scss` and lightweight `assets/js/main.min.js`.
-- Keep Jekyll layouts/includes simple and GitHub Pages-compatible.
-- Add a full-width `page` layout for current professional pages.
-- Keep archive/single layouts functional for legacy collections.
-- Use CSS custom properties from `DESIGN_SYSTEM.md`, system font stack, responsive grids, restrained cards, visible focus states, skip link, and accessible mobile nav.
-
-## 6. Accessibility, SEO, Performance, and Privacy Requirements
-
-- Semantic landmarks, skip link, heading order, keyboard navigation, visible focus, touch-friendly mobile menu, reduced-motion media query.
-- Accurate title, description, canonical URLs, Open Graph/Twitter metadata, and Person JSON-LD with verified public links only.
-- No analytics unless a real ID is supplied; set analytics provider to false.
-- No third-party scripts or font downloads.
-- Clear PDF/download labeling.
-
-## 7. Milestones, Files, Commands, Acceptance Criteria
+## Milestones
 
 1. Repository orientation
-   - Files: required docs, `_config.yml`, layouts, includes, pages, collections, assets.
-   - Acceptance: architecture and current risks documented here.
+   - Files: `AGENTS.md`, project docs, scholarly pages, collections, config, layouts/includes, SCSS, check script.
+   - Acceptance: branch created from up-to-date `master`; existing route strategy documented.
+   - Status: completed.
+2. Bibliographic verification
+   - Files/sources: `PUBLICATIONS.docx`, publisher/DOI/CRAN/conference sources.
+   - Acceptance: 11 journal records and software metadata verified conservatively; unverified records marked private.
+   - Status: completed.
+3. Data and rendering implementation
+   - Files: `_data/scholarship.yml`, `_pages/research.md`, `_pages/publications.md`, `_pages/talks.html`, relevant includes/SCSS as needed.
+   - Acceptance: pages render from canonical data and meet requested content exclusions.
+   - Status: completed.
+4. Legacy route updates
+   - Files: `_publications/equating.md`, `_publications/2021-paper.md`, other collection pages as needed.
+   - Acceptance: legacy pages resolve and display corrected citations.
+   - Status: completed.
+5. Generated-site validation
+   - Files: `scripts/check_site.rb`.
+   - Commands: bundle install, Jekyll build, generated-site check.
+   - Acceptance: all required checks pass.
+   - Status: completed.
+6. Browser QA and screenshots
+   - Routes: `/research/`, `/publications/`, `/talks/`, `/publications/equating/`, `/publications/2021-paper/`.
+   - Acceptance: desktop/mobile screenshots, no console errors, no horizontal overflow, mobile nav works.
+   - Status: completed.
+7. Commit, push, draft PR
+   - Acceptance: coherent commit, branch pushed, draft PR opened if authentication is available.
+   - Status: pending.
 
-2. Foundation and metadata
-   - Files: `_config.yml`, `_data/navigation.yml`, `_includes/head.html`, `_includes/seo.html`, `_includes/masthead.html`, `_includes/footer.html`, `_includes/scripts.html`.
-   - Acceptance: current metadata, nav, SEO, JSON-LD, no stale author sidebar facts.
+## Progress Log
 
-3. Content pages
-   - Files: `_pages/about.md`, `_pages/research.md`, `_pages/projects.md`, `_pages/human-ai-fairness-audit.md`, `_pages/resume.md`, `_pages/cv.md`, `_pages/contact.md`, `_pages/publications.md`.
-   - Acceptance: requested routes exist, legacy routes remain usable, factual claims align with content deck.
+- 2026-07-03: Read user request from attached text and `AGENTS.md`.
+- 2026-07-03: Switched from prior refresh branch to `master`, pulled latest `origin/master`, created `codex/correct-publications-no-reports`.
+- 2026-07-03: Read required project/spec/design/content/planning docs.
+- 2026-07-03: Inspected `_pages/research.md`, `_pages/publications.md`, `_pages/talks.html`, `_config.yml`, `_publications/`, `_talks/`, `assets/css/main.scss`, layouts, and `scripts/check_site.rb`.
+- 2026-07-03: Extracted `PUBLICATIONS.docx` text and confirmed technical reports must be excluded.
+- 2026-07-03: Verified 11 journal records and the CRAN software record; corrected official titles, author initials, DOI links, article numbers, pages, and online-first/formal-year distinctions.
+- 2026-07-03: Added `_data/scholarship.yml` and `_includes/scholarship-citation.html`.
+- 2026-07-03: Rebuilt `/research/`, `/publications/`, and `/talks/` from canonical data; withheld unverified manuscripts and the 2025 NCME submitted proposal from public rendering.
+- 2026-07-03: Updated legacy publication routes, including `/publications/equating/` and `/publications/2021-paper/`; disabled inherited social-share blocks on publication records to preserve heading hierarchy.
+- 2026-07-03: Normalized legacy talk punctuation and the AERA 2020 cancellation/accepted-session wording.
+- 2026-07-03: Added `PUBLICATIONS.docx` to `.gitignore` to keep the user-supplied inventory local and unpublished.
 
-4. Visual system and assets
-   - Files: `assets/css/main.scss`, `assets/js/main.min.js`, `files/Jiayi_Deng_Resume_2026.pdf`.
-   - Acceptance: responsive professional site; resume generated into `_site/files/`.
+## Exact Validation Evidence
 
-5. Internal checks and generated-site smoke tests
-   - Commands to run and record: dependency install, production build with trace, available tests/lint, internal link check, content stale-text scan, PDF/CTA assertions.
-
-6. Browser QA
-   - Serve locally, inspect required pages at desktop and 390px mobile, check console, capture screenshots.
-
-7. Commit and handoff
-   - Acceptance: coherent commits, clean handoff except intentional ignored files or documented constraints.
-
-## 8. Progress Log
-
-- 2026-07-03: Read `AGENTS.md`, `PROJECT_SPEC.md`, `CURRENT_SITE_AUDIT.md`, `DESIGN_SYSTEM.md`, `CONTENT_DECK.md`, and `.agent/PLANS.md`.
-- 2026-07-03: Inspected current branch/remotes, repository file tree, key Jekyll config, layouts/includes, navigation, pages, collections, assets, and stale-content search results.
-- 2026-07-03: Created branch `codex/refresh-personal-website` from `master` while preserving the existing dirty worktree.
-- 2026-07-03: Created this execution plan before implementation edits.
-- 2026-07-03: Updated site metadata, author profile, analytics setting, navigation, accessible masthead, footer, SEO include, skip-link target, and full-width page layout.
-- 2026-07-03: Rebuilt Home, Research, Publications archive, Projects, Human-AI Fairness Audit case study, Resume, `/cv/` compatibility route, and Contact pages.
-- 2026-07-03: Replaced dependency on deleted legacy generated CSS/JS with first-party `assets/css/main.scss` and `assets/js/main.min.js`.
-- 2026-07-03: Copied supplied resume PDF to `files/Jiayi_Deng_Resume_2026.pdf`.
-- 2026-07-03: Fixed local asset URL handling by changing `_includes/base_path` to use `site.baseurl` instead of the absolute public URL.
-- 2026-07-03: Added `scripts/check_site.rb` generated-site smoke checker and ran production build, link/content checks, browser QA, and screenshots.
-- 2026-07-03: Verified GitHub CLI authentication for account `JiayiDeng`; push/PR creation is available.
-- 2026-07-03: Committed `7c92654e4c6c35c869502625b7869d1a9b69c181`, pushed branch `codex/refresh-personal-website`, and opened draft PR `https://github.com/JiayiDeng/jiayideng.github.io/pull/1`.
-
-## 9. Decisions and Discoveries
-
-- Use incremental Jekyll modernization; no framework migration needed.
-- Legacy generated CSS/JS files are already deleted in the starting worktree, so the refresh will replace them with a small first-party stylesheet and navigation script.
-- Preserve old publication/talk/teaching collection item URLs.
-- Keep LinkedIn URL configured from the supplied slug, marked as needing user verification unless live validation succeeds.
-- Do not surface unverified LinkedIn, ResearchGate, or Twitter as current-profile links. Public current-profile links are GitHub, Google Scholar, ORCID, email, and the audit project links.
-- Local system Ruby is 2.6.10; unconstrained dependency resolution selected `ffi-1.17.4-x86_64-darwin`, which requires Ruby 3.x. Added a conservative `ffi ~> 1.15.0` Gemfile pin so the repository-supported Bundler/Jekyll process can validate locally without changing site architecture or adding an unsupported plugin.
-
-## 10. Exact Validation Evidence
-
-- Dependency installation:
-  - `bundle install` with system Ruby 2.6 failed because Bundler attempted `/Library/Ruby/Gems/2.6.0/bundler.lock`.
-  - `bundle install --path vendor/bundle` outside sandbox reached RubyGems but failed because `ffi-1.17.4-x86_64-darwin` requires Ruby 3.x.
-  - Added `ffi ~> 1.15.0`; system Ruby then failed compiling native gems because SDK headers resolve to `universal-darwin24` while installed Ruby headers are under `universal-darwin25`.
-  - Installed Homebrew Ruby 4.0.5, but Bundler could not resolve `github-pages ~> 228` because `commonmarker < 1.0` requires Ruby `< 4.0`.
-  - Installed Homebrew Ruby 3.4.10.
-  - `/opt/homebrew/opt/ruby@3.4/bin/bundle install` passed with `github-pages 228`; added explicit `csv` and `webrick` gems for Ruby 3.4 compatibility with Jekyll 3.9.
-- Production build:
-  - `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll build --trace` passed.
-  - Known non-fatal output: Bundler temp home warning because `/Users/jiayideng` is not writable in the sandbox, Jekyll logger/Stevenson warnings, and Faraday retry advisory.
-- Generated-site smoke check:
-  - `/opt/homebrew/opt/ruby@3.4/bin/ruby scripts/check_site.rb` passed.
-  - Confirms required routes, local links/assets, resume PDF, homepage/resume PDF links, audit CTAs, and stale current-profile phrase absence on core pages.
-- Resume:
-  - `_site/files/Jiayi_Deng_Resume_2026.pdf` exists.
-  - `_site/index.html` and `_site/resume/index.html` link to `/files/Jiayi_Deng_Resume_2026.pdf`.
-- Stale content sweep:
-  - `rg -n "Second-year Phd Student|Second-year PhD student|Ph\\.D\\. student|expected 2024|deng0194@umn\\.edu|personal description|Jiayi Deng CV 2022" _site` returned no matches.
-  - `Minneapolis, MN` remains only in historical talks/archive pages, not current-profile pages.
-- External URL checks:
-  - `https://github.com/JiayiDeng/Human-AI-Fairness-Audit-Lab`: HTTP 200.
-  - `https://github.com/JiayiDeng`: HTTP 200.
-  - `https://orcid.org/0000-0002-1962-2956`: HTTP 200.
-  - `https://scholar.google.com.hk/citations?user=rZjKaN0AAAAJ&hl=en`: HTTP 200.
-  - `https://human-ai-fairness-audit-lab.streamlit.app/`: reachable but `curl -I -L` hit Streamlit authentication redirects and stopped at max redirects; the link remains the supplied official demo URL.
+- `/opt/homebrew/opt/ruby@3.4/bin/bundle install`
+  - Passed. Bundler used a temporary home because `/Users/jiayideng` is not writable under the sandbox.
+  - Result: `Bundle complete! 9 Gemfile dependencies, 97 gems now installed.`
+- `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll build --trace`
+  - Passed.
+  - Notes: existing Jekyll warnings about logger initialization, `Jekyll::Stevenson#initialize`, and optional `faraday-retry`; no build failure.
+- `/opt/homebrew/opt/ruby@3.4/bin/ruby scripts/check_site.rb`
+  - Passed with `Generated-site check passed.`
+  - Added assertions cover required routes, 11 journal records, six selected Research records, separate `aberrance` journal/software records, newest-to-oldest ordering, legacy routes, internal links, empty links, forbidden public strings, withheld 2025 proposal, and technical-report exclusion.
+- Local server:
+  - Initial sandboxed bind failed with `Operation not permitted - bind(2) for 127.0.0.1:4000`.
+  - Retried with approved local bind: `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll serve --host 127.0.0.1 --port 4000 --trace`.
+  - Served successfully at `http://127.0.0.1:4000/`.
 - Browser QA:
-  - Local server: `/opt/homebrew/opt/ruby@3.4/bin/bundle exec jekyll serve --host 127.0.0.1 --port 4000 --trace`.
-  - Browser loaded local CSS and JS from `http://127.0.0.1:4000/assets/...` after fixing `_includes/base_path`.
-  - Desktop and 390px mobile inspected for Home, Projects, Human-AI case study, Resume, Research, Contact, and representative legacy publication page.
-  - Browser checks: no console errors, no horizontal overflow at 390px, skip link present, one H1 on homepage, all images have alt attributes, PDF link text includes PDF, mobile menu button has accessible name and opens with `aria-expanded="true"`.
-- Screenshot/appshot paths:
-  - `.agent/screenshots/home-desktop-1440-viewport.png`
-  - `.agent/screenshots/home-mobile-390-viewport.png`
-  - `.agent/screenshots/home-mobile-menu-open-390-viewport.png`
-  - `.agent/screenshots/projects-desktop-1440-viewport.png`
-  - `.agent/screenshots/audit-case-study-desktop-1440-viewport.png`
-  - `.agent/screenshots/resume-desktop-1440-viewport.png`
-  - `.agent/screenshots/research-desktop-1440-viewport.png`
-  - `.agent/screenshots/contact-mobile-390-viewport.png`
-  - `.agent/screenshots/legacy-publication-desktop-1440-viewport.png`
-- Git/GitHub:
-  - `git commit -m "Refresh professional website"` created `7c92654e4c6c35c869502625b7869d1a9b69c181`.
-  - `git push -u origin codex/refresh-personal-website` passed.
-  - `/opt/homebrew/bin/gh pr create --draft --base master --head codex/refresh-personal-website ...` created `https://github.com/JiayiDeng/jiayideng.github.io/pull/1`.
-  - `/opt/homebrew/bin/gh pr view 1 --json url,isDraft,headRefName,baseRefName,state,statusCheckRollup` returned draft/open PR with empty `statusCheckRollup`.
+  - Routes inspected at desktop width 1440 and mobile width 390: `/research/`, `/publications/`, `/talks/`, `/publications/equating/`, `/publications/2021-paper/`.
+  - Console errors: none on inspected routes.
+  - Horizontal overflow: none on inspected routes.
+  - Heading hierarchy: no skips after disabling legacy publication share blocks.
+  - Empty links and missing image alt attributes: none on inspected routes.
+  - Mobile navigation: menu button present at 390px; click set `aria-expanded="true"` and revealed Home, Research, Projects, Resume, Contact.
+  - DOI/external link presence: Publications page contains 12 DOI links including journal and package DOI; CRAN link present.
+  - Deng emphasis: present in all generated citation-list author lines on Research, Publications, and Talks.
+  - Reduced motion/focus styles: `prefers-reduced-motion: reduce`, skip link, and `:focus-visible` rules verified in `assets/css/main.scss`. Synthetic Tab movement did not transfer focus in the browser automation environment, so focus visibility was verified statically rather than by a successful browser Tab event.
+- Screenshot evidence:
+  - `.agent/screenshots/research-viewport-desktop-1440.png`
+  - `.agent/screenshots/research-viewport-mobile-390.png`
+  - `.agent/screenshots/publications-viewport-desktop-1440.png`
+  - `.agent/screenshots/publications-viewport-mobile-390.png`
+  - `.agent/screenshots/talks-viewport-desktop-1440.png`
+  - `.agent/screenshots/talks-viewport-mobile-390.png`
+  - `.agent/screenshots/legacy-equating-viewport-desktop-1440.png`
+  - `.agent/screenshots/legacy-equating-viewport-mobile-390.png`
+  - `.agent/screenshots/legacy-2021-paper-viewport-desktop-1440.png`
+  - `.agent/screenshots/legacy-2021-paper-viewport-mobile-390.png`
+  - `.agent/screenshots/mobile-nav-open-390.png`
 
-## 11. Remaining Risks and Handoff
+## Remaining Risks and Handoff Items
 
-- LinkedIn profile URL from the source package was not published because it was not verified cleanly during implementation. Current public profile links are GitHub, Google Scholar, and ORCID.
-- Streamlit URL was externally reachable but HEAD verification loops through Streamlit auth redirects. User should click-test the live app in a normal browser session after PR/deploy.
-- GitHub Pages public deployment is not verified until the pushed branch/PR is built by GitHub Pages and the public URL is checked.
+- Need official confirmation for the 2025 NCME submitted proposal before publishing it as a completed presentation.
+- Need user confirmation before publishing either private manuscript record:
+  - `Can AI motivate students? A systematic review and meta-analysis on AI's role in student motivation and engagement`
+  - `Beyond self-regulated learning: Exploring the roles of emotional competence and online learning readiness pre- and post-COVID-19 in high school students' math performance?`
+- The 2023 Conference on Test Security `aberrance` presentation remains marked `needs_verification: true` in data because the supplied inventory did not include a presentation type; it is rendered conservatively as a paper presentation from the conference inventory.
+- Historical Minneapolis locations remain in legacy talk records and generated talk pages as event locations, not current-profile location claims.

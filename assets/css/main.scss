@@ -598,10 +598,12 @@ ol {
 }
 
 .publication-item h2,
-.publication-item h3 {
+.publication-item h3,
+.publication-item h4 {
   margin-bottom: 0.35rem;
   font-size: 1.12rem;
   line-height: 1.32;
+  overflow-wrap: anywhere;
 }
 
 .publication-item__status {
@@ -609,6 +611,40 @@ ol {
   color: var(--color-ink-muted);
   font-size: 0.88rem;
   font-weight: 800;
+}
+
+.publication-item__authors,
+.publication-item__meta,
+.publication-item__links {
+  margin-bottom: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.publication-item__authors {
+  color: var(--color-ink);
+}
+
+.publication-item__meta {
+  color: var(--color-ink-muted);
+}
+
+.publication-item__links {
+  font-weight: 750;
+}
+
+.publication-item__note {
+  color: var(--color-ink-muted);
+}
+
+.section-action {
+  margin-top: 1.25rem;
+  font-weight: 800;
+}
+
+.archive-year {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .timeline {
